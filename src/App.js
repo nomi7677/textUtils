@@ -26,20 +26,20 @@ const toggleMode= ()=>{
 
   return (
    <>
-   <Router>
+    <Router> 
   <Navbar title="TextUtils" mode={mode} aboutText="About_TextUtils" toggleMode={toggleMode}/> 
   {/* <Navbar /> */}
 
   <div className="container my-3">
 
   <Switch>
-          <Route exact path="/about">
-            <About />
+         <Route exact path="/about">
+           <About mode={mode} />
           </Route>
           
           <Route path="/" exact>
-          <TextForm heading="Enter the text to analyze" mode={mode}/>
-          </Route>
+          <TextForm heading="TextUtils - word counter, character counter ..." mode={mode}/>
+          </Route> 
   </Switch>
   </div>
 </Router>
